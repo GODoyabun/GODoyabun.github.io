@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre Líneas - Librería</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Estilos para la sección de ofertas de Black Friday */
+        .ofertasBlackFriday {
+            padding: 40px;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .oferta {
+            display: inline-block;
+            background-color: #f7f7f7;
+            padding: 15px;
+            margin: 15px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .oferta h3 {
+            margin-bottom: 10px;
+        }
+
+        .oferta p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .oferta .precio {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        .oferta .descuento {
+            color: #2ecc71;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Entre Líneas</h1>
+        <p>Tu refugio literario, donde las historias cobran vida.</p>
+    </header>
+
+    <nav>
+        <a href="Library.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="#">Novedades</a>
+        <a href="Library.html">Eventos</a> <!-- Cambiado a eventos de ofertas -->
+        <a href="#">Libro</a>
+    </nav>
+
+    <div class="container">
+        <section class="intro">
+            <h2>Bienvenidos a Entre Líneas</h2>
+            <p>En nuestra librería, cada libro es una puerta a un nuevo mundo. Ya sea que busques clásicos literarios, novedades editoriales o un rincón especial de libros recomendados, en <strong>Entre Líneas</strong> encontrarás el refugio perfecto para tu pasión por la lectura.</p>
+            <p>Te invitamos a explorar nuestras estanterías llenas de historias que esperan ser descubiertas, donde cada página cuenta una nueva aventura. ¡Ven a compartir tu amor por los libros con nosotros!</p>
+        </section>
+
+        <!-- Sección de Ofertas Especiales de Black Friday -->
+        <section id="ofertasBlackFriday" class="ofertasBlackFriday">
+            <h2>Ofertas Especiales de Black Friday</h2>
+            <div class="oferta">
+                <h3>Drácula</h3>
+                <p>Autor: Bram Stoker</p>
+                <p class="precio">$950.00</p>
+                <p class="descuento">¡Descuento del 30% por Black Friday!</p>
+            </div>
+            <div class="oferta">
+                <h3>Orgullo y Prejuicio</h3>
+                <p>Autor: Jane Austen</p>
+                <p class="precio">$850.00</p>
+                <p class="descuento">¡Descuento del 25% por Black Friday!</p>
+            </div>
+            <div class="oferta">
+                <h3>It</h3>
+                <p>Autor: Stephen King</p>
+                <p class="precio">$1200.00</p>
+                <p class="descuento">¡Descuento del 40% por Black Friday!</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Pestaña de contacto -->
+    <div id="contactoPestana">
+        <h2>Contáctanos</h2>
+        <p><strong>Dirección:</strong> Mega Centro, Puerta del sol</p>
+        <p><strong>Correo:</strong> <a href="mailto:Entre_Lineas@gmail.com">Entre_Lineas@gmail.com</a></p>
+        <p><strong>Teléfono:</strong> 829 515 7496</p>
+    </div>
+
+    <!-- Botón para abrir la pestaña de contacto -->
+    <button id="abrirContacto">📝</button>
+
+    <footer>
+        <p>&copy; 2024 Entre Líneas | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+       const libros = [
+    // Terror
+    { titulo: 'Drácula', autor: 'Bram Stoker', precio: '$950.00', descripcion: 'Un clásico del terror gótico.' },
+    { titulo: 'Frankenstein', autor: 'Mary Shelley', precio: '$900.00', descripcion: 'La historia del monstruo de Frankenstein.' },
+    { titulo: 'It', autor: 'Stephen King', precio: '$1200.00', descripcion: 'Un payaso malévolo aterroriza a un pueblo.' },
+    { titulo: 'El resplandor', autor: 'Stephen King', precio: '$1100.00', descripcion: 'El mal se esconde en el hotel Overlook.' },
+    { titulo: 'Carrie', autor: 'Stephen King', precio: '$1000.00', descripcion: 'Una joven con poderes sobrenaturales busca venganza.' },
+    { titulo: 'El exorcista', autor: 'William Peter Blatty', precio: '$1050.00', descripcion: 'Un aterrador relato de posesión demoníaca.' },
+    { titulo: 'La casa infernal', autor: 'Richard Matheson', precio: '$950.00', descripcion: 'Una mansión encantada y sus secretos oscuros.' },
+    { titulo: 'La caverna', autor: 'José Saramago', precio: '$800.00', descripcion: 'Un relato oscuro sobre el destino humano.' },
+    { titulo: 'El perro de los Baskerville', autor: 'Arthur Conan Doyle', precio: '$950.00', descripcion: 'Un misterio aterrador protagonizado por Sherlock Holmes.' },
+    { titulo: 'Pesadilla', autor: 'Stephen King', precio: '$980.00', descripcion: 'Pesadillas se hacen realidad en este relato de terror.' },
+    { titulo: 'Nosferatu', autor: 'Guillermo del Toro', precio: '$1100.00', descripcion: 'Un vampiro más allá del cine, una obra maestra del terror.' },
+    { titulo: 'Cementerio de animales', autor: 'Stephen King', precio: '$1000.00', descripcion: 'El precio de la muerte y la resurrección en un pequeño pueblo.' },
+    { titulo: 'La profecía', autor: 'Shirley Jackson', precio: '$950.00', descripcion: 'Una de las historias de horror psicológico más aterradoras.' },
+    { titulo: 'La maldición', autor: 'Shirley Jackson', precio: '$970.00', descripcion: 'La maldición que rodea a una familia.' },
+    { titulo: 'Los otros', autor: 'Alejandro González Iñárritu', precio: '$1200.00', descripcion: 'Un thriller psicológico que desafía la percepción de la realidad.' },
+    { titulo: 'Misterio en la casa del árbol', autor: 'Neil Gaiman', precio: '$1000.00', descripcion: 'Un cuento oscuro sobre un árbol lleno de secretos.' },
+    { titulo: 'El retrato de Dorian Gray', autor: 'Oscar Wilde', precio: '$900.00', descripcion: 'El hombre que no envejece mientras su retrato lo hace.' },
+    { titulo: 'El horror de Dunwich', autor: 'H.P. Lovecraft', precio: '$950.00', descripcion: 'Una historia aterradora de la mitología de Lovecraft.' },
+    { titulo: 'Mundo sombrío', autor: 'Tim Waggoner', precio: '$900.00', descripcion: 'Terror psicológico y criaturas de otro mundo.' },
+    { titulo: 'La casa de los mil pasillos', autor: 'Guillermo del Toro', precio: '$1100.00', descripcion: 'Una mansión llena de secretos y pesadillas.' },
+
+    // Romance
+    { titulo: 'Orgullo y prejuicio', autor: 'Jane Austen', precio: '$850.00', descripcion: 'La historia de amor de Elizabeth Bennet y Mr. Darcy.' },
+    { titulo: 'Cumbres borrascosas', autor: 'Emily Brontë', precio: '$950.00', descripcion: 'Una historia de pasión y venganza entre Heathcliff y Catherine.' },
+    { titulo: 'El amor en los tiempos del cólera', autor: 'Gabriel García Márquez', precio: '$1100.00', descripcion: 'Un amor que supera los años y las dificultades.' },
+    { titulo: 'Bajo la misma estrella', autor: 'John Green', precio: '$900.00', descripcion: 'Una emotiva historia de amor entre dos jóvenes con cáncer.' },
+    { titulo: 'P.S. Te amo', autor: 'Cecelia Ahern', precio: '$950.00', descripcion: 'El amor más allá de la muerte.' },
+    { titulo: 'La chica del tren', autor: 'Paula Hawkins', precio: '$1000.00', descripcion: 'Un thriller psicológico que explora el amor, la obsesión y el engaño.' },
+    { titulo: 'Te daré el sol', autor: 'Jandy Nelson', precio: '$950.00', descripcion: 'Un relato sobre el amor y las relaciones familiares.' },
+    { titulo: 'Un beso en París', autor: 'Stephanie Perkins', precio: '$900.00', descripcion: 'Un romance juvenil en la ciudad del amor.' },
+    { titulo: 'A todos los chicos de los que me enamoré', autor: 'Jenny Han', precio: '$950.00', descripcion: 'Una joven se enfrenta a sus sentimientos cuando sus cartas secretas se hacen públicas.' },
+    { titulo: 'La sombra del viento', autor: 'Carlos Ruiz Zafón', precio: '$1000.00', descripcion: 'Un misterio literario y un amor oculto en Barcelona.' },
+    { titulo: 'Cincuenta sombras de Grey', autor: 'E.L. James', precio: '$950.00', descripcion: 'Una historia de pasión y control en el mundo del erotismo.' },
+    { titulo: 'El cuaderno de Noah', autor: 'Nicholas Sparks', precio: '$850.00', descripcion: 'El amor eterno narrado a través de un cuaderno de recuerdos.' },
+    { titulo: 'Cuando te vuelva a ver', autor: 'Keny Monge', precio: '$900.00', descripcion: 'Un amor que renace después de años de separación.' },
+    { titulo: 'Mi corazón en tus manos', autor: 'Vera Caspary', precio: '$850.00', descripcion: 'Un amor dramático con giros inesperados.' },
+    { titulo: 'La última carta de amor', autor: 'Jojo Moyes', precio: '$1000.00', descripcion: 'Una historia de amor a través de cartas perdidas en el tiempo.' },
+    { titulo: 'Después de ti', autor: 'Jojo Moyes', precio: '$950.00', descripcion: 'La continuación de una historia de amor inolvidable.' },
+    { titulo: 'Amor y otras drogas', autor: 'Jamie Reidy', precio: '$950.00', descripcion: 'Una historia que mezcla romance y comedia con un toque de drama.' },
+    { titulo: 'La boda', autor: 'Nicholas Sparks', precio: '$950.00', descripcion: 'Una novela sobre el amor maduro y la familia.' },
+    { titulo: 'Cometas en el cielo', autor: 'Khaled Hosseini', precio: '$1000.00', descripcion: 'Una historia de amor y amistad en un contexto histórico turbulento.' },
+    { titulo: 'Anna y el beso francés', autor: 'Stephanie Perkins', precio: '$950.00', descripcion: 'Un romance juvenil en París, la ciudad del amor.' }
+];
+
+        // Función para mostrar los libros
+        function mostrarLibros() {
+            const contenedorLibros = document.querySelector('.libros');
+            libros.forEach(libro => {
+                const libroElemento = document.createElement('div');
+                libroElemento.classList.add('libro');
+                
+                libroElemento.innerHTML = `
+                    <img src="${libro.imagen}" alt="${libro.titulo}">
+                    <h3>${libro.titulo}</h3>
+                    <p><strong>Autor:</strong> ${libro.autor}</p>
+                    <p><strong>Precio:</strong> ${libro.precio}</p>
+                    <p>${libro.descripcion}</p>
+                    <button>Agregar al Carrito</button>
+                `;
+
+                contenedorLibros.appendChild(libroElemento);
+            });
+        }
+
+        // Llamar a la función para mostrar los libros cuando la página cargue
+        window.onload = mostrarLibros;
+
+        // Función para abrir y cerrar la pestaña de contacto
+        document.getElementById("abrirContacto").addEventListener("click", function() {
+            document.getElementById("contactoPestana").classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
